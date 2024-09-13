@@ -124,6 +124,7 @@
     <header>
         <div class="container en">
             <h1 id="title">AWS EC2 Overview</h1>
+            <p>Amazon EC2 (Elastic Compute Cloud) is a web service that provides scalable compute capacity in the cloud. It allows you to run virtual servers (instances) on-demand, which you can configure based on your needs. Think of EC2 as renting a computer in the cloud that you can turn on and off as you need.</p>
             <ul class="menus">
                 <li>
                     <a href="index.html" class="link">IAM</a>
@@ -138,7 +139,8 @@
             <button class="language-switch" onclick="switchLanguage()">বাংলা</button>
         </div>
         <div class="container bn">
-            <h1>AWS EC2 পর্যালোচনা</h1><ul class="menus">
+            <h1>AWS EC2 পর্যালোচনা</h1>
+                <p>আমাজন EC2 (এলাস্টিক কম্পিউট ক্লাউড) একটি ওয়েব পরিষেবা যা ক্লাউডে স্কেলযোগ্য কম্পিউট ক্যাপাসিটি প্রদান করে। এটি আপনাকে অন-ডিমান্ড ভিত্তিতে ভার্চুয়াল সার্ভার (ইনস্ট্যান্স) চালানোর সুযোগ দেয়, যা আপনি আপনার প্রয়োজন অনুসারে কনফিগার করতে পারেন। EC2 কে মনে করুন এমন একটি পরিষেবা যা ক্লাউডে একটি কম্পিউটার ভাড়া নেওয়ার মতো, যাকে আপনি আপনার প্রয়োজন অনুযায়ী চালু এবং বন্ধ করতে পারেন।</p>
             <ul class="menus">
                 <li>
                     <a href="index.html" class="link">IAM</a>
@@ -155,11 +157,172 @@
     </header>
     
     <div class="container en">
+        <section id="section-intro">
+            <h2>What is Amazon EC2?</h2>
+            <p>Amazon EC2 (Elastic Compute Cloud) is a web service that provides scalable compute capacity in the cloud. It allows you to run virtual servers (instances) on-demand, which you can configure based on your needs. Think of EC2 as renting a computer in the cloud that you can turn on and off as you need.</p>
+        </section>
 
+        <section id="section-key-concepts">
+            <h2>Key Concepts</h2>
+            <h3>Instances</h3>
+            <ul>
+                <li><strong>Instance Types:</strong> Various types optimized for different use cases, such as compute-optimized and memory-optimized.</li>
+                <li><strong>AMIs (Amazon Machine Images):</strong> Templates with pre-configured setups for your instance.</li>
+                <li><strong>Instance States:</strong> Instances can be running, stopped, terminated, etc.</li>
+            </ul>
+
+            <h3>Storage</h3>
+            <ul>
+                <li><strong>EBS (Elastic Block Store):</strong> Persistent storage that remains even if you stop or terminate your instance.</li>
+                <li><strong>Instance Store:</strong> Temporary storage that is lost if the instance is stopped or terminated.</li>
+                <li><strong>S3 (Simple Storage Service):</strong> Used for storing large amounts of data and backups.</li>
+            </ul>
+
+            <h3>Networking</h3>
+            <ul>
+                <li><strong>Security Groups:</strong> Virtual firewalls controlling traffic to and from instances.</li>
+                <li><strong>Key Pairs:</strong> Used for SSH or RDP access to instances.</li>
+                <li><strong>Elastic IPs:</strong> Static IP addresses for dynamic cloud computing.</li>
+                <li><strong>VPC (Virtual Private Cloud):</strong> A network you define within AWS to isolate and control your resources.</li>
+            </ul>
+        </section>
+
+        <section id="section-getting-started">
+            <h2>Getting Started with EC2</h2>
+            <h3>Step 1: Launching Your First Instance</h3>
+            <ol>
+                <li><strong>Sign in to AWS Management Console:</strong> Go to the <a href="https://aws.amazon.com/console/" target="_blank">AWS Management Console</a> and log in.</li>
+                <li><strong>Open EC2 Dashboard:</strong> Navigate to Services and click on EC2.</li>
+                <li><strong>Launch Instance:</strong>
+                    <ul>
+                        <li><strong>Choose an AMI:</strong> Select a pre-configured image like Amazon Linux 2 AMI or Ubuntu.</li>
+                        <li><strong>Choose an Instance Type:</strong> Select a type based on your needs (e.g., t2.micro).</li>
+                        <li><strong>Configure Instance:</strong> Modify settings as needed.</li>
+                        <li><strong>Add Storage:</strong> Use default storage or add more.</li>
+                        <li><strong>Add Tags:</strong> Add tags to organize your instances.</li>
+                        <li><strong>Configure Security Group:</strong> Define rules to control traffic.</li>
+                        <li><strong>Review and Launch:</strong> Review your settings and launch the instance. Save your private key file.</li>
+                    </ul>
+                </li>
+                <li><strong>Connect to Your Instance:</strong> Follow instructions to connect using SSH or an SSH client.</li>
+            </ol>
+            <h3>Step 2: Managing Your Instance</h3>
+            <ul>
+                <li><strong>Stop and Start:</strong> Save costs by stopping instances when not in use.</li>
+                <li><strong>Terminate:</strong> Permanently delete instances when no longer needed.</li>
+            </ul>
+            <h3>Step 3: Security and Networking</h3>
+            <ul>
+                <li><strong>Security Groups:</strong> Define rules to control access.</li>
+                <li><strong>Key Pairs:</strong> Securely connect to instances.</li>
+                <li><strong>VPC:</strong> Create a custom VPC for more control over your network.</li>
+            </ul>
+        </section>
+
+        <section id="section-additional-features">
+            <h2>Additional Features</h2>
+            <ul>
+                <li><strong>Elastic Load Balancing (ELB):</strong> Distributes incoming traffic across multiple instances.</li>
+                <li><strong>Auto Scaling:</strong> Automatically adjusts the number of instances based on demand.</li>
+                <li><strong>Spot Instances:</strong> Bid on unused EC2 capacity at lower prices.</li>
+                <li><strong>Reserved Instances:</strong> Discounted pricing for committing to use EC2 for a term.</li>
+                <li><strong>Savings Plans:</strong> Flexible pricing model with savings based on usage commitment.</li>
+            </ul>
+        </section>
+
+        <section id="section-resources">
+            <h2>Learning Resources</h2>
+            <ul>
+                <li><a href="https://docs.aws.amazon.com/ec2/index.html" target="_blank">AWS Documentation</a>: Detailed guides and tutorials.</li>
+                <li><a href="https://aws.amazon.com/training/" target="_blank">AWS Training</a>: Courses and certifications to deepen your understanding.</li>
+                <li><a href="https://aws.amazon.com/free/" target="_blank">AWS Free Tier</a>: Try out EC2 and other AWS services for free.</li>
+            </ul>
+        </section>
     </div>
 
     <div class="container bn">
-
+        <section id="section-intro">
+            <h2>আমাজন EC2 কী?</h2>
+            <p>আমাজন EC2 (Elastic Compute Cloud) হল একটি ওয়েব সার্ভিস যা ক্লাউডে স্কেলেবল কম্পিউট ক্ষমতা প্রদান করে। এটি আপনাকে অন-ডিমান্ডে ভার্চুয়াল সার্ভার (ইনস্ট্যান্স) চালাতে দেয়, যা আপনি আপনার প্রয়োজন অনুযায়ী কনফিগার করতে পারেন। EC2-কে ক্লাউডে একটি কম্পিউটার ভাড়া নেওয়ার মতো ভাবুন, যা আপনি প্রয়োজন অনুযায়ী চালু এবং বন্ধ করতে পারেন।</p>
+        </section>
+        
+        <section id="section-key-concepts">
+            <h2>মূল ধারণাসমূহ</h2>
+            <h3>ইনস্ট্যান্স</h3>
+            <ul>
+                <li><strong>ইনস্ট্যান্স টাইপস:</strong> বিভিন্ন প্রয়োজনে অপ্টিমাইজড বিভিন্ন ধরনের ইনস্ট্যান্স, যেমন কম্পিউট-অপ্টিমাইজড এবং মেমরি-অপ্টিমাইজড।</li>
+                <li><strong>AMIs (Amazon Machine Images):</strong> আপনার ইনস্ট্যান্সের জন্য প্রি-কনফিগারড সেটআপ সহ টেমপ্লেট।</li>
+                <li><strong>ইনস্ট্যান্স স্টেটস:</strong> ইনস্ট্যান্স চালু, বন্ধ, মুছে ফেলা ইত্যাদি অবস্থায় থাকতে পারে।</li>
+            </ul>
+        
+            <h3>স্টোরেজ</h3>
+            <ul>
+                <li><strong>EBS (Elastic Block Store):</strong> স্থায়ী স্টোরেজ যা আপনার ইনস্ট্যান্স বন্ধ বা মুছে ফেলা হলেও থাকে।</li>
+                <li><strong>ইনস্ট্যান্স স্টোর:</strong> অস্থায়ী স্টোরেজ যা ইনস্ট্যান্স বন্ধ বা মুছে ফেলা হলে হারিয়ে যায়।</li>
+                <li><strong>S3 (Simple Storage Service):</strong> বড় পরিমাণে ডেটা এবং ব্যাকআপ সংরক্ষণের জন্য ব্যবহৃত হয়।</li>
+            </ul>
+        
+            <h3>নেটওয়ার্কিং</h3>
+            <ul>
+                <li><strong>সিকিউরিটি গ্রুপস:</strong> ইনস্ট্যান্সের দিকে এবং থেকে ট্রাফিক নিয়ন্ত্রণকারী ভার্চুয়াল ফায়ারওয়াল।</li>
+                <li><strong>কী পেয়ার্স:</strong> ইনস্ট্যান্সে SSH বা RDP অ্যাক্সেসের জন্য ব্যবহৃত হয়।</li>
+                <li><strong>ইলাস্টিক আইপিস:</strong> গতিশীল ক্লাউড কম্পিউটিংয়ের জন্য স্ট্যাটিক IP অ্যাড্রেস।</li>
+                <li><strong>VPC (Virtual Private Cloud):</strong> AWS-এর মধ্যে একটি নেটওয়ার্ক যা আপনি আপনার রিসোর্সগুলি আলাদা এবং নিয়ন্ত্রণ করার জন্য সংজ্ঞায়িত করেন।</li>
+            </ul>
+        </section>
+        
+        <section id="section-getting-started">
+            <h2>EC2 দিয়ে শুরু করা</h2>
+            <h3>ধাপ ১: আপনার প্রথম ইনস্ট্যান্স চালু করা</h3>
+            <ol>
+                <li><strong>AWS ম্যানেজমেন্ট কনসোলে সাইন ইন করুন:</strong> <a href="https://aws.amazon.com/console/" target="_blank">AWS Management Console</a> এ যান এবং লগ ইন করুন।</li>
+                <li><strong>EC2 ড্যাশবোর্ড খুলুন:</strong> সার্ভিসেস-এ যান এবং EC2 তে ক্লিক করুন।</li>
+                <li><strong>ইনস্ট্যান্স চালু করুন:</strong>
+                    <ul>
+                        <li><strong>AMI নির্বাচন করুন:</strong> একটি প্রি-কনফিগারড ইমেজ নির্বাচন করুন যেমন Amazon Linux 2 AMI বা Ubuntu।</li>
+                        <li><strong>ইনস্ট্যান্স টাইপ নির্বাচন করুন:</strong> আপনার প্রয়োজন অনুযায়ী একটি টাইপ নির্বাচন করুন (যেমন, t2.micro)।</li>
+                        <li><strong>ইনস্ট্যান্স কনফিগার করুন:</strong> প্রয়োজনীয় সেটিংস পরিবর্তন করুন।</li>
+                        <li><strong>স্টোরেজ যোগ করুন:</strong> ডিফল্ট স্টোরেজ ব্যবহার করুন অথবা আরও যোগ করুন।</li>
+                        <li><strong>ট্যাগ যোগ করুন:</strong> আপনার ইনস্ট্যান্সগুলি সংগঠিত করতে ট্যাগ যোগ করুন।</li>
+                        <li><strong>সিকিউরিটি গ্রুপ কনফিগার করুন:</strong> ট্রাফিক নিয়ন্ত্রণের জন্য নিয়ম সংজ্ঞায়িত করুন।</li>
+                        <li><strong>পর্যালোচনা এবং লঞ্চ করুন:</strong> আপনার সেটিংস পর্যালোচনা করুন এবং ইনস্ট্যান্স চালু করুন। আপনার প্রাইভেট কী ফাইল সংরক্ষণ করুন।</li>
+                    </ul>
+                </li>
+                <li><strong>আপনার ইনস্ট্যান্সে সংযুক্ত হন:</strong> SSH বা SSH ক্লায়েন্ট ব্যবহার করে সংযুক্ত হতে নির্দেশনা অনুসরণ করুন।</li>
+            </ol>
+            <h3>ধাপ ২: আপনার ইনস্ট্যান্স পরিচালনা করা</h3>
+            <ul>
+                <li><strong>বন্ধ এবং শুরু:</strong> ব্যবহার না করলে খরচ বাঁচাতে ইনস্ট্যান্স বন্ধ করুন।</li>
+                <li><strong>মুছে ফেলা:</strong> প্রয়োজন না হলে ইনস্ট্যান্স স্থায়ীভাবে মুছে ফেলুন।</li>
+            </ul>
+            <h3>ধাপ ৩: সিকিউরিটি এবং নেটওয়ার্কিং</h3>
+            <ul>
+                <li><strong>সিকিউরিটি গ্রুপস:</strong> অ্যাক্সেস নিয়ন্ত্রণের জন্য নিয়ম সংজ্ঞায়িত করুন।</li>
+                <li><strong>কী পেয়ার্স:</strong> ইনস্ট্যান্সে নিরাপদভাবে সংযুক্ত হোন।</li>
+                <li><strong>VPC:</strong> আপনার নেটওয়ার্কের উপর আরও নিয়ন্ত্রণের জন্য কাস্টম VPC তৈরি করুন।</li>
+            </ul>
+        </section>
+        
+        <section id="section-additional-features">
+            <h2>অতিরিক্ত বৈশিষ্ট্য</h2>
+            <ul>
+                <li><strong>ইলাস্টিক লোড ব্যালান্সিং (ELB):</strong> আগত ট্রাফিক বিভিন্ন ইনস্ট্যান্সে বিতরণ করে।</li>
+                <li><strong>অটো স্কেলিং:</strong> চাহিদার ভিত্তিতে ইনস্ট্যান্সের সংখ্যা স্বয়ংক্রিয়ভাবে সামঞ্জস্য করে।</li>
+                <li><strong>স্পট ইনস্ট্যান্স:</strong> কম দামে অপ্রচলিত EC2 ক্ষমতার জন্য বিড করুন।</li>
+                <li><strong>রিজার্ভড ইনস্ট্যান্স:</strong> একটি সময়কালের জন্য EC2 ব্যবহার করতে প্রতিশ্রুতির জন্য ডিসকাউন্ট প্রদান করে।</li>
+                <li><strong>সেভিংস প্ল্যান:</strong> ব্যবহারের প্রতিশ্রুতি ভিত্তিক সাশ্রয় সহ নমনীয় মূল্য মডেল।</li>
+            </ul>
+        </section>
+        
+        <section id="section-resources">
+            <h2>শেখার রিসোর্স</h2>
+            <ul>
+                <li><a href="https://docs.aws.amazon.com/ec2/index.html" target="_blank">AWS ডকুমেন্টেশন</a>: বিস্তারিত গাইড এবং টিউটোরিয়াল।</li>
+                <li><a href="https://aws.amazon.com/training/" target="_blank">AWS প্রশিক্ষণ</a>: আপনার বোঝাপড়া গভীর করার জন্য কোর্স এবং সার্টিফিকেশন।</li>
+                <li><a href="https://aws.amazon.com/free/" target="_blank">AWS ফ্রি টিয়ার</a>: ফ্রি তে EC2 এবং অন্যান্য AWS সেবা চেষ্টা করুন।</li>
+            </ul>
+        </section>
+        
     </div>
 
     <!-- Scroll to Top Button -->

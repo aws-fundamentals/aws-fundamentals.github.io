@@ -119,8 +119,76 @@
             background-color: #555;
         }
     </style>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #333;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .sidebar a:not(.openbtn) {
+        display: block;
+        background: #444;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .sidebar a:hover {
+        background: #555;
+    }
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background: #444;
+        color: white;
+        border: none;
+        position: fixed;
+        right: -5px;
+        top: 50%;
+        padding: 10px 10px;
+    }
+    .openbtn:hover {
+        background: #555;
+    }
+    .btn-group{
+        position: absolute;
+        top: 36%;
+    }
+    .btn-group button{
+        width: 100%;
+    }
+</style>
 </head>
 <body>
+    <div class="sidebar" id="mySidebar">
+        
+    <button class="openbtn" onclick="toggleSidebar()"><</button>
+        <div class="btn-group">
+            <a href="NET.html">.Net</a>
+            <a href="DataStructure.html">Data Structure</a>
+            <a href="index.html">AWS</a>
+        </div>
+    </div>
+
+
+
+
     <header>
         <div class="container en">
             <h1 id="title">AWS IAM Overview</h1>
@@ -618,6 +686,22 @@
 
         function scrollToTop() {
             $('html, body').animate({ scrollTop: 0 }, 800, 'swing');
+        }
+
+
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById("mySidebar");
+            const openbtn = document.getElementsByClassName("openbtn");
+            if (sidebar.style.width === "150px") {
+                sidebar.style.width = "0";
+                $('.openbtn').css('right', '0px');
+                $('.openbtn').text('<');
+            } else {
+                sidebar.style.width = "150px";
+                $('.openbtn').css('right', '145px');
+                $('.openbtn').text('>');
+            }
         }
     </script>
 </body>
